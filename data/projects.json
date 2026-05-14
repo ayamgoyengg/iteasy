@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Sports Club Pondok Tjandra Indah",
+    "desc": "Modern sports club website concept focused on increasing member engagement, showcasing facilities, schedules, and simplifying contact through WhatsApp integration.",
+    "tags": [
+      "Design",
+      "Next.js",
+      "React"
+    ],
+    "category": "Design",
+    "year": "2026",
+    "image": "https://i.imgur.com/ZScE4Cl.png",
+    "href": "https://sportsclub-gamma.vercel.app/",
+    "status": "published",
+    "id": "6c8f9507-4c67-4a1a-842c-4ac5aaf80a72",
+    "createdAt": "2026-05-14T16:12:48.993Z"
+  }
+]

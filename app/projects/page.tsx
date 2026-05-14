@@ -21,9 +21,7 @@ export default function ProjectsPage() {
   const [loading, setLoading] = useState(true)
   const [active, setActive] = useState('All')
   const headerRef = useRef<HTMLDivElement>(null)
-  const gridRef = useRef<HTMLDivElement>(null)
   const headerInView = useInView(headerRef, { once: true })
-  const gridInView = useInView(gridRef, { once: true, margin: '-60px' })
 
   useEffect(() => {
     fetch('/api/projects')
@@ -115,10 +113,10 @@ export default function ProjectsPage() {
 
         {/* Grid */}
         {!loading && !isEmpty && (
-          <div ref={gridRef}>
+          <div>
             <motion.div
               className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
-              initial="hidden" animate={gridInView ? 'visible' : 'hidden'}
+              initial="hidden" animate="visible"
               variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
             >
               {filtered.length === 0 ? (

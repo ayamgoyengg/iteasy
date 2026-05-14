@@ -31,6 +31,10 @@ export const metadata: Metadata = {
   description: 'Crafting Outstanding Digital Experiences | Design & Development Studio based in Surabaya, Indonesia',
   keywords: 'design studio, web development, UI/UX, digital experiences, Surabaya, Indonesia',
   authors: [{ name: 'ITEASY Studio' }],
+  icons: {
+    icon: '/assets/logoonly.png',
+    apple: '/assets/logoonly.png',
+  },
   openGraph: {
     title: 'ITEASY — Design & Development Studio',
     description: 'Crafting Outstanding Digital Experiences',

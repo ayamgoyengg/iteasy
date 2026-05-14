@@ -1,18 +1,18 @@
-import fs from 'fs'
-import path from 'path'
+import { Redis } from '@upstash/redis'
 import type { Project } from '@/types/project'
 
-const FILE = path.join(process.cwd(), 'data', 'projects.json')
+const redis = Redis.fromEnv()
+const KEY = 'projects'
 
-export function readProjects(): Project[] {
+export async function readProjects(): Promise<Project[]> {
   try {
-    if (!fs.existsSync(FILE)) return []
-    return JSON.parse(fs.readFileSync(FILE, 'utf-8')) as Project[]
+    const data = await redis.get<Project[]>(KEY)
+    return data ?? []
   } catch {
     return []
   }
 }
 
-export function writeProjects(projects: Project[]): void {
-  fs.writeFileSync(FILE, JSON.stringify(projects, null, 2), 'utf-8')
+export async function writeProjects(projects: Project[]): Promise<void> {
+  await redis.set(KEY, projects)
 }

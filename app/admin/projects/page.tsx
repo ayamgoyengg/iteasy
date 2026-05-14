@@ -121,7 +121,7 @@ export default function AdminProjects() {
         <div className="flex items-center gap-2">
           <button
             onClick={openCreate}
-            className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all"
+            className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all"
             style={{ background: '#fff', color: '#080810' }}
             onMouseEnter={(e) => (e.currentTarget.style.background = '#e8e8f0')}
             onMouseLeave={(e) => (e.currentTarget.style.background = '#fff')}
@@ -321,6 +321,23 @@ export default function AdminProjects() {
           </div>
         </div>
       )}
+
+      {/* ── FAB mobile ── */}
+      <button
+        onClick={openCreate}
+        className="sm:hidden fixed z-50 flex items-center justify-center rounded-full shadow-lg transition-all active:scale-95"
+        style={{
+          bottom: 'calc(1.5rem + env(safe-area-inset-bottom, 0px))',
+          right: '1.5rem',
+          width: '56px',
+          height: '56px',
+          background: '#fff',
+          color: '#080810',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+        }}
+      >
+        <Plus size={22} />
+      </button>
 
       {/* ── Delete Modal ── */}
       {modal === 'delete' && active && (

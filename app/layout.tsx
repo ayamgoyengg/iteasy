@@ -53,6 +53,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth overflow-x-hidden">
       <head>
         <meta name="theme-color" content="#0CC0DF" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
       <body className={`${spaceGrotesk.variable} ${inter.variable} ${playfair.variable} bg-background text-foreground overflow-x-hidden font-body`}>
         <EdgeAccent />

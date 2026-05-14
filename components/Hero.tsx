@@ -10,11 +10,12 @@ const up = (delay = 0) => ({
 
 const Hero = () => {
   return (
-    <ShaderBackground className="min-h-screen w-full">
+    <ShaderBackground className="min-h-[100dvh] w-full">
 
       {/* ── Content: bottom-left ── */}
       <motion.main
-        className="absolute bottom-10 left-0 px-8 sm:px-12 z-20 max-w-2xl"
+        className="absolute bottom-0 left-0 px-8 sm:px-12 z-20 max-w-2xl"
+        style={{ paddingBottom: 'calc(2.5rem + env(safe-area-inset-bottom, 0px))' }}
         initial="hidden"
         animate="visible"
         variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12, delayChildren: 0.3 } } }}
@@ -23,7 +24,7 @@ const Hero = () => {
         <motion.h1
           variants={up()}
           className="leading-[1.1] tracking-tight mb-5"
-          style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)" }}
+          style={{ fontSize: "clamp(2.2rem, 6vw, 5rem)" }}
         >
           <span className="font-serif italic font-normal text-white">Beautiful</span>
           {" "}

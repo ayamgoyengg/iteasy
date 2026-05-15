@@ -35,9 +35,15 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" ref={ref} className="relative py-28 sm:py-36 overflow-hidden" style={{ background: '#080810' }}>
+      {/* Top fade from Services */}
+      <div className="absolute top-0 left-0 right-0 h-28 pointer-events-none z-10"
+        style={{ background: 'linear-gradient(to bottom, #080810, transparent)' }} />
+      {/* Bottom fade into Contact */}
+      <div className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none z-10"
+        style={{ background: 'linear-gradient(to top, #0b0a18, transparent)' }} />
       <div
         className="absolute bottom-0 right-0 -z-10 pointer-events-none"
-        style={{ width: '50vw', height: '50vh', background: 'radial-gradient(ellipse 80% 80% at 80% 80%, rgba(168,85,247,0.06) 0%, transparent 70%)' }}
+        style={{ width: '60vw', height: '60vh', background: 'radial-gradient(ellipse 80% 80% at 80% 80%, rgba(168,85,247,0.13) 0%, transparent 70%)' }}
       />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">

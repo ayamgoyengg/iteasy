@@ -21,14 +21,17 @@ const About = () => {
 
   return (
     <section id="about" ref={ref} className="relative py-28 sm:py-36 overflow-hidden" style={{ background: '#080810' }}>
-      {/* Gradient fade from hero */}
-      <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none -z-10"
-        style={{ background: 'linear-gradient(to bottom, rgba(8,8,16,0) 0%, #080810 100%)' }} />
+      {/* Top fade from hero */}
+      <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none z-10"
+        style={{ background: 'linear-gradient(to bottom, rgba(8,8,16,0.6) 0%, transparent 100%)' }} />
+      {/* Bottom fade into Services */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none z-10"
+        style={{ background: 'linear-gradient(to top, #0b0a18 0%, transparent 100%)' }} />
       <div
         className="absolute top-0 right-0 -z-10 pointer-events-none"
         style={{
-          width: '50vw', height: '60vh',
-          background: 'radial-gradient(ellipse 80% 80% at 80% 20%, rgba(168,85,247,0.07) 0%, transparent 70%)',
+          width: '60vw', height: '70vh',
+          background: 'radial-gradient(ellipse 80% 80% at 80% 20%, rgba(168,85,247,0.14) 0%, transparent 70%)',
         }}
       />
 

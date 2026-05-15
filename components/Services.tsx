@@ -76,17 +76,17 @@ const Services = () => {
 
   return (
     <section id="services" ref={ref} className="relative py-28 sm:py-36 overflow-hidden" style={{ background: '#0b0a18' }}>
-      {/* Top fade from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-20 pointer-events-none z-10"
+      {/* Top fade */}
+      <div className="absolute top-0 left-0 right-0 h-28 pointer-events-none z-10"
         style={{ background: 'linear-gradient(to bottom, #080810, transparent)' }} />
-      {/* Bottom fade to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none z-10"
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none z-10"
         style={{ background: 'linear-gradient(to top, #080810, transparent)' }} />
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 -z-10 pointer-events-none"
         style={{
-          width: '70vw', height: '50vh',
-          background: 'radial-gradient(ellipse 80% 80% at 50% 0%, rgba(12,192,223,0.06) 0%, transparent 70%)',
+          width: '80vw', height: '60vh',
+          background: 'radial-gradient(ellipse 80% 80% at 50% 0%, rgba(12,192,223,0.13) 0%, transparent 70%)',
         }}
       />
 

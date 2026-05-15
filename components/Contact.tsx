@@ -17,14 +17,17 @@ const Contact = () => {
   return (
     <section id="contact" ref={ref} className="relative py-28 sm:py-40 overflow-hidden" style={{ background: '#0b0a18' }}>
       {/* Top fade */}
-      <div className="absolute top-0 left-0 right-0 h-20 pointer-events-none z-10"
+      <div className="absolute top-0 left-0 right-0 h-28 pointer-events-none z-10"
         style={{ background: 'linear-gradient(to bottom, #080810, transparent)' }} />
+      {/* Bottom fade into footer */}
+      <div className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none z-10"
+        style={{ background: 'linear-gradient(to top, #050510, transparent)' }} />
       {/* Radial glow */}
       <div
         className="absolute inset-0 -z-10 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(168,85,247,0.08) 0%, rgba(12,192,223,0.04) 50%, transparent 80%)',
+            'radial-gradient(ellipse 90% 70% at 50% 50%, rgba(168,85,247,0.15) 0%, rgba(12,192,223,0.07) 50%, transparent 80%)',
         }}
       />
 
